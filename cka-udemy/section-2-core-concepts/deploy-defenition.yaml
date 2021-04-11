@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: Deployment
 metadata:
   name:  myapp
   labels:
@@ -18,6 +18,6 @@ spec:
       - name:  nginx-container
         image:  nginx
         resources:
-          requests:
+          limits:
             cpu: 100m
             memory: 100Mi
